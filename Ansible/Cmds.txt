@@ -1,0 +1,17 @@
+mkdir -p ~/.ssh
+
+cp /mnt/d/DevOps/Ansible/Ansible.pem ~/.ssh/
+
+chmod 400 ~/.ssh/Ansible.pem
+
+ssh -i ~/.ssh/Ansible.pem ubuntu@new.amazonaws.com
+
+sudo apt-add-repository ppa:ansible/ansible 
+
+sudo apt update
+
+sudo apt install ansible
+
+sudo vim /etc/ansible/hosts
+
+
